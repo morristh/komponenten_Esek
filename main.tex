@@ -1,0 +1,218 @@
+\documentclass{article}
+\usepackage[a6paper,
+            total={105mm, 148mm},
+            margin=30pt,
+            twoside % Tillåter olika placering av sidnummer på udda och jämna sidor
+]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parselines}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}  % Package for absolute positioning
+\usepackage{atbegshi}
+
+\usepackage{imakeidx} % Registret
+\usepackage{background} % Gråa Krusidull-E:et och alla bilder
+\usepackage{ifoddpage} % Gråa Krudidull-E:et på udda sidor
+
+% Normal background setup for odd pages
+\backgroundsetup{
+  scale=0.65,
+  opacity=0.075,
+  angle=0,
+  color=black,
+  vshift=-130,
+  hshift=50,
+  contents={%
+    \checkoddpage
+    \ifoddpage
+      \includegraphics[width=\paperwidth]{./bilder/large_E.png}
+    \else
+      %\includegraphics[width=\paperwidth]{../bilder/VarumarkesBildServlet.jpg}
+    \fi
+  }
+}
+
+
+\newcommand{\custombackground}[1]{
+  \backgroundsetup{
+    scale=0.65,
+    opacity=0.0,
+    angle=0,
+    color=black,
+    vshift=-130,
+    hshift=50,
+    contents={\includegraphics[width=\paperwidth]{#1}}
+  }
+}
+
+\newcommand{\noBackground}{
+  \backgroundsetup{
+    scale=0.65,
+    opacity=0.0,
+    angle=0,
+    color=black,
+    vshift=-130,
+    hshift=50,
+    contents={\includegraphics[width=\paperwidth]{./bilder/no_background.png}}
+  }
+}
+
+
+\newcommand{\resetBackground}{
+  \backgroundsetup{
+    scale=0.65,
+    opacity=0.075,
+    angle=0,
+    color=black,
+    vshift=-130,
+    hshift=50,
+    contents={%
+      \checkoddpage
+      \ifoddpage
+        \includegraphics[width=\paperwidth]{./bilder/large_E.png}
+      \else
+        %\includegraphics[width=\paperwidth]{../bilder/VarumarkesBildServlet.jpg}
+      \fi
+    }
+  }
+}
+
+
+
+% Disable indentation for the whole document
+\setlength{\parindent}{0pt}
+
+
+% Use fontspec with XeLaTeX or LuaLaTeX to load system fonts
+\usepackage{fontspec}
+
+% Set up the subsection font to Lucida Sans Unicode
+\usepackage{titlesec}
+\titleformat{\subsection}
+  {\normalfont\fontsize{12pt}{10pt}\selectfont\fontspec{Lucida Sans Unicode}} % Adjust the size if needed
+  {\thesubsection}{1em}{}
+
+% Adjust vertical spacing around subsection titles
+\titlespacing{\subsection}
+{0pt}                % Left margin
+{0.5ex plus .2ex}    % Space before subsection title (adjust as needed)
+{0.5ex plus .2ex}    % Space after subsection title (adjust to decrease space after)
+
+% Adjust footskip to add space below the footer
+% \setlength{\footskip}{20pt} % Flyttar upp footern lite ########################################## Denna funkar inte riktigt som jag trodde. Jag vill flytta upp sidnumret lite mer
+\setlength{\textheight}{120mm}
+
+
+% Define the page style
+\fancypagestyle{main}{
+  \fancyhf{} % clear all header and footer fields
+  \fancyhead[RO]{\hfill \footnotesize\scshape\leftmark \hfill}
+  % \fancyfoot[LE,RO]{\thepage}
+
+  % Adjust the page number position
+  % Set page number closer to the edge by increasing the right margin
+  \fancyfoot[LE]{\hspace{-17pt}\thepage} % Flytta ut sidnummer jämna sidor
+  \fancyfoot[RO]{\thepage\hspace{-17pt}} % Flytta ut sidnummer udda sidor
+
+  % Ta bort linje under/över header och footer
+  \renewcommand{\headrulewidth}{0 pt}
+  \renewcommand{\footrulewidth}{0 pt}
+
+  % Använder footnote for 'visste du att'
+  \renewcommand{\footnoterule}{}
+  \renewcommand{\thefootnote}{}
+}
+
+% Set up textblock package to work with A6 paper
+\setlength{\TPHorizModule}{1mm}  % Set horizontal units to mm
+\setlength{\TPVertModule}{1mm}   % Set vertical units to mm
+
+% Define the custom command to place text at the bottom of the page
+\newcommand{\vissteduatt}[1]{%
+    \begin{textblock*}{100mm}(12mm,137mm) % Adjust (2.5mm, 140mm) to position text
+        \raggedright
+        {\footnotesize{\textit{#1}}}
+    \end{textblock*}
+    \newpage % Ensures that the text appears only on the current page
+}
+
+
+% Define the custom command for small font and italics
+\newcommand{\songinfo}[1]{%
+  \textit{\small #1 \\}%
+}
+
+
+
+
+
+
+
+
+
+% DETTA SÄTTET ATT GÖRA REGISTER FUNGERAR BRA OCH ÄR LÄTT MEN DET BLIR INTE LIKA SNYGGT UTAN PUNKTERNA
+
+
+
+% HITTA ETT SÄTT ATT GÖRA ETT SNYGGARE REGISTER INNAN VI FORTSÄTTER ATT LÄGGA TILL LÅTAR ETC. 
+\makeindex[ % Alfabetiskt register
+  name=alfa,
+  columns=1,
+  title=Alfabetiskt Register,
+  intoc,
+  options = {-s styleAlfa.ist}
+]
+\makeindex[ % Analfabetiskt register -- början av sången
+  name=anfa,
+  columns=1,
+  title=Analfabetiskt Register,
+  intoc,
+  options = {-s styleAlfa.ist}
+]
+
+
+\begin{document}
+
+% Apply the 'main' page style
+\pagestyle{main}
+
+% Title and empty page without header/footer
+\NoBgThispage
+\begin{titlepage}
+    \centering
+    \vspace{1cm}
+    {\fontsize{18}{18}\selectfont E-sektionens sångbok}\\
+    \vspace{0.2cm}
+    {\fontsize{30}{30}\textbf{Komponenten}}\\
+    \vspace{0.2cm}
+    {\fontsize{15}{15}\textit{2:a upplagan}}
+    \thispagestyle{empty}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{./bilder/large_E.png}
+    \end{figure}
+
+\end{titlepage}
+
+
+\newpage
+
+\input{kapitel/00-intro.tex}
+
+\input{kapitel/01-sånger.tex}
+
+\input{kapitel/02-E-sektionens_kampvisor.tex}
+
+\input{kapitel/03-Andra_sektioner.tex}
+
+\input{kapitel/04-Klassiska_visor.tex}
+
+\newpage
+\resetBackground
+\printindex[alfa]
+\printindex[anfa]
+\newpage
+
+\end{document}

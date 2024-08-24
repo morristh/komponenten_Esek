@@ -150,11 +150,14 @@
 }
 
 
-% Define the custom command for small font and italics
-\newcommand{\songinfo}[1]{%
-  \textit{\small #1 \\}%
-}
+% % Define the custom command for small font and italics
+% \newcommand{\songinfo}[1]{%
+%   \textit{\fontsize{1}{1}\selectfont \linespread{1}\baselineskip=1pt #1 \\}%
+% }
 
+\newcommand{\songinfo}[1]{%
+  \textit{\fontsize{9}{9}\selectfont \baselineskip=9pt \parbox{\textwidth}{#1} \\} 
+}
 
 
 
@@ -231,7 +234,9 @@
 
 %\input{kapitel/09-snapsvisor.tex}
 
-\input{kapitel/10-rekursiva_visor.tex}
+% \input{kapitel/10-rekursiva_visor.tex}
+
+\input{kapitel/11-slaskvisor.tex}
 
 \newpage
 \resetBackground

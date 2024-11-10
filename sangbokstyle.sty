@@ -107,11 +107,13 @@
 ]
 
 
-%%% Page layout and custom footers %%%
+%%% Page layout and custom footers and headers %%%
 % Define the page style
 \fancypagestyle{main}{
   \fancyhf{} % clear all header and footer fields
-  %\fancyhead[RO]{\hfill \footnotesize\scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  % \fancyhead[RO]{\fontsize{24pt}{24pt}\hfill \footnotesize\scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  \fancyhead[RO]{\fontsize{10pt}{12pt}\hfill \scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  \fancyhead[LE]{\fontsize{10pt}{12pt}\hfill \scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
   % \fancyfoot[LE,RO]{\thepage}
 
   % Adjust the page number position
@@ -123,10 +125,19 @@
   \renewcommand{\headrulewidth}{0 pt}
   \renewcommand{\footrulewidth}{0 pt}
 
-  % Använder footnote for 'visste du att'
-  \renewcommand{\footnoterule}{} % TODO testa att ta bort
-  \renewcommand{\thefootnote}{}
+  % Adjust header space
+  \setlength{\headheight}{30pt}  % Increase to avoid header cut-off
+  \setlength{\headsep}{15pt}     % Increase space between header and body text
+  % \setlength{\footskip}{25pt}    % Optional: Adjust footer space
 }
+
+% Custom command to add content to the table of contents and set the header
+\newcommand{\addtocwithheader}[1]{%
+  \addcontentsline{toc}{section}{#1}  % Add to TOC
+  \markboth{#1}{#1}  % Set header for the current section
+  \thispagestyle{empty}
+}
+
 
 
 %%% Custom command for song information %%%
@@ -159,8 +170,6 @@
 % Adjust footskip to add space below the footer
 % \setlength{\footskip}{20pt} % Flyttar upp footern lite ########################################## Denna funkar inte riktigt som jag trodde. Jag vill flytta upp sidnumret lite mer
 \setlength{\textheight}{120mm}
-
-
 
 % Set up textblock package to work with A6 paper
 \setlength{\TPHorizModule}{1mm}  % Set horizontal units to mm

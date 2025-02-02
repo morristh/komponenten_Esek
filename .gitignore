@@ -10,3 +10,7 @@
 *.idx
 *.ilg
 *.ind
+
+# Ignore other files
+GAMMALT/
+kapitel_komponenten_1/

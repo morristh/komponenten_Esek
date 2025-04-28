@@ -1,7 +1,7 @@
 --- Klassiska visor ---
 Dansen går upp på svinsta skär
 I natt jag drömde
-nu grönsar det
+nu grönskar det
 än en gång däran
 
 :::lämnade några att tänka på
@@ -22,16 +22,16 @@ prostatabesvär
 
 --- Vinvisor ---
 Lovsången till kvinnan
-Korkskruvens visa
-
+Korkskruvens visa ?
+ 
 --- Snapsvisor ---
-Livet är härligt
+Livet är härligt NEJ
 Fisken i viken
 Skotten
-Änglahund
+Änglahund OSÄKKER
 Långt ner i Småland
 Solen går upp och ner
-Handelsvisan
+Handelsvisan 
 
 --- Rekursiva visor ---
 ::inga togs bort nu, kanske vill ta bort "Mesen" dock
@@ -46,7 +46,9 @@ Pissoarpoesi
 --- Punschvisor ---
 Jag gillar punschen
 Punsch, Punsch filibom bom bom
-Punschen vi radat
+Punschen vi radat JAG GILLAR DENNA
+
+(Lägger vi till nya låtar? annars kanske de kan vara kvar?)
 
 --- internationella visor ---
 soft kitty warm kitty

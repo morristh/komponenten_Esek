@@ -11,6 +11,12 @@
 *.ilg
 *.ind
 
+*.fls
+*.toc
+*.xdv
+*.fdb_latexmk
+*.synctex(busy)
+
 # Ignore other files
 GAMMALT/
 kapitel_komponenten_1/

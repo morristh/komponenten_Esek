@@ -24,53 +24,71 @@ Tack till de som hjälpt oss med boken!
 
 \newpage
 
+% % Save current headsep
+% \newlength{\oldheadsep}
+% \setlength{\oldheadsep}{\headsep}
+
+% % Reduce headsep and set pagestyle
+% \newpage
+% \setlength{\headsep}{0pt}
+% % \thispagestyle{noheader}
+
+% \newgeometry{top=10pt, bottom=30pt, left=30pt, right=30pt}
+% \setlength{\footskip}{15pt} % Decrease to move the footer up
+
+
+
+\vspace*{-13mm} % Pull the content upwards (adjust as needed)
+\enlargethispage{15mm} % Allow more vertical space at the bottom
+
+
+
+% \enlargethispage{1.5cm}  % Adjust as needed
+
 \begin{center}
     \textbf{Viktig information}
 \end{center}
 
-% \backgroundsetup{ 
-%   scale=0.36,
-%   opacity=1,
-%   angle=0,
-%   color=black,
-%   vshift=300,
-%   hshift=151,
-%   contents={\includegraphics[width=\paperwidth]{./bilder/profilbild.png}}
-% }
 
-\begin{textblock*}{6cm}(6cm,2.0cm) % {block width}(x-coordinate, y-coordinate)
+\begin{textblock*}{6cm}(6.0cm,1.5cm) % {block width}(x-coordinate, y-coordinate)
   \includegraphics[width=3.5cm]{./bilder/profilbild_stor.png} % Adjust the image size as needed
 \end{textblock*}
+\vspace*{3.0mm}
 \begin{parse lines}[\noindent]{#1\\\vspace{0.5mm}}
-    
-    Ägare:\vspace{2mm}
-    Program:\vspace{2mm}
-    Inskrivningsår:\vspace{2mm}
-    Födelsedatum:\vspace{2mm}
-    Telefonnummer:\vspace{2mm}
+  Ägare:\vspace{2mm}
+  Program:\vspace{2mm}
+  Inskrivningsår:\vspace{2mm}
+  Födelsedatum:\vspace{2mm}
+  Telefonnummer:\vspace{2mm}
 
 
-    Lämna tillbaka mig till den här adressen:
-
-
-    Hittelön:
-    Om jag inte varit teknolog hade jag varit:
-    Om jag fick välja nollningstema:
-    Words per minute: 
-    Om jag hade en superkraft: 
-    Favoritmat:
-    Favoritband:
-    Favorit
-    Bästa 
-    Favoritintegral:
+  Lämna tillbaka mig till den här adressen:\vspace{8mm}
+  Hittelön:
+  Jag vill reinkarneras som:
+  I mitt förra liv var jag:
+  Detta dricker jag helst:
+  Bästa barndomsminnet:
+  Julklappen jag aldrig fick:
+  Mest impulsiva jag gjort:
+  Om jag hade en superkraft:
+  Bästa partytrick:
+  Favoritintegral:
+  Min säng är så här bred:
+  Första kändis-crush:
+  Gör så här för att charma mig:
+  Om jag hade fått välja nollningstema:
 \end{parse lines}
 
 \newpage
-
 % \subsubsection*{Innehållsförteckning}
+\clearpage
 \tableofcontents
+\thispagestyle{plainnohead}
+
+
 
 \newpage
+
 \begin{center}
   \vspace*{1.5cm}
   {\fontsize{20}{20}\textbf{Vett och etikett}}\\
@@ -80,8 +98,9 @@ Tack till de som hjälpt oss med boken!
 \addtocwithheader{Vett och etikett}  % Add entry to TOC and set header
 \noBackground
 \newpage
+\resetBackground
 
-\subsubsection*{KLÄDKOD}
+\subsection*{Klädkod}
 För att underlätta förmedlingen av vem som ska ha på sig vad använder vi oss av följande namn.\\
 
 \textbf{Truls}: Manlig teknolog\\
@@ -121,27 +140,11 @@ Ibland även kallad bruten elelr udda kavaj.\\
 \textbf{Trula}: Ouvve\\
 \textbf{Trelsa}: Se Truls/Trula
 
-\newpage
-\subsubsection*{KLÄDKOD version 2?}
-Kåren har ett annat upplägg på hur de visar klädkoderna. Vill vi göra som dem?
-\\
-
-Exempel (kopierat från kårens bok)
-
-\subsubsection*{Högtidsdräkt/högtidsklädsel}
-För honom är frack lämplig. 
-En fin golvlång klänning gäller för henne 
-- ett bra material och ett tjusigt sntit ska det vara på den. 
-Vill man bära handskar till klänningen går det bra, 
-men glöm inte att ta av dem när du äter. 
-Både han och hon kan istälet bära hembygdsdräkt eller militär högtidsdräkt.
-
 
 \newpage
 
-\subsubsection*{ETIKETT}
 
-\subsubsection*{Vid bordet}
+\subsection*{Vid bordet}
 Han har sin bordsdam till höger om sig och hon har sin bordsherre till vänster.
 Herren drar ut stolen till höger för att hjälpa sin bordsdam till bords eller från bordet.
 \\
@@ -178,17 +181,6 @@ Vid bal och finare sittningar är det brukligt att ha med sig en present till si
 En fun fact är att begreppet "vänterprassla" kommer just från att det fanns/finns vissa herrar som inte kunde/kan hålla sig till sin bordsdam, 
 utan istället såg/ser sig om till vänster for att prova lyckan där.
 
-\textbf{Denna texten är typ kopierad av gamla sångboken, vi får gå igenom den och se om vi vill ändra något eller behålla.}
-\\
-\\
-\\
-
-{\fontsize{16}{18}\selectfont Testar lite större text}
-
-{\fontsize{5}{7}\selectfont Testar lite mindre text}
-
-
-\textbf{Denna visste du att måste nog skrivas om eller ändra storleken på all text i boken. Vi ahr lite större text än i gamla komponenten vilket göra att vi inte får plats med riktigt lika mycket text på varje sida....}
 
 \vissteduatt{Visste du att bordsherre och bordsdam är bordsplaceringsbenämningar\\ som avser att underlätta sittningsförfarande och är helt könsneutralt?}
 
@@ -196,7 +188,10 @@ utan istället såg/ser sig om till vänster for att prova lyckan där.
 
 \subsection*{Skålen}
 
-När det skålas och det ska skålas korrekt så börjar man med att skåla med sin bordsgranne, sedan med din sekundära bordsgranne och slutligen rakt över till den mittemot. Efter dricker man ur och upprepar denna process, fast baklänges.
+När det skålas och det ska skålas korrekt så börjar man 
+med att skåla med sin bordsgranne, sedan med din sekundära 
+bordsgranne och slutligen rakt över till den mittemot. 
+Efter dricker man ur och upprepar denna process, fast baklänges.
 \\
 
 Alltså:
@@ -209,8 +204,6 @@ Hon börjar till vänster,
 sedan höger och slutligen rakt fram.
 
 Drick, sedan alltsammans baklänges.
-
-\textbf{Denna texten är typ kopierad av gamla sångboken, vi får gå igenom den och se om vi vill ändra något eller behålla.}
 
 \vissteduatt{En myt säger att man får börja äta av maten vid fler gäster än åtta vid bordet, detta är fel!}
 
@@ -311,42 +304,42 @@ Gör ouvven fin.
 \newpage
 
 
-\subsubsection*{Hur man är på sittning}
-\subsubsection*{REGLER}
+% \subsubsection*{Hur man är på sittning}
+% \subsubsection*{REGLER}
 
-\subsubsection*{Mellanskål}
+% \subsubsection*{Mellanskål}
 
-Nu är det dags för mellanskål
-Om det så är det sista jag gör
-Nu är det dags för mellanskål
-Hoppas inte föräldrarna stör
-Nu är det slut på versen 
-Det är dags för mellanskål
+% Nu är det dags för mellanskål
+% Om det så är det sista jag gör
+% Nu är det dags för mellanskål
+% Hoppas inte föräldrarna stör
+% Nu är det slut på versen 
+% Det är dags för mellanskål
 
-\newpage
+% \newpage
 
-\subsection*{Hur man tågar}
+% \subsection*{Hur man tågar}
 
-När ett stort antal teknologer behöver förflytta sig till fots, kan detta göras genom att tåga. 
-När man möter ett övergångsställe stannar delar av tåget med jämna mellanrum för att låta bilar passera.
-När man tågar håller man sig åt sidan av vägen där man går så att cyklar och andra kan åka förbi.
+% När ett stort antal teknologer behöver förflytta sig till fots, kan detta göras genom att tåga. 
+% När man möter ett övergångsställe stannar delar av tåget med jämna mellanrum för att låta bilar passera.
+% När man tågar håller man sig åt sidan av vägen där man går så att cyklar och andra kan åka förbi.
 
-När man tågar ska man såklart sjunga, och här passar E-sektionens kampvisor mycket väl.
+% När man tågar ska man såklart sjunga, och här passar E-sektionens kampvisor mycket väl.
 
-En annan låt som gärna sjunges är den här under. 
+% En annan låt som gärna sjunges är den här under. 
 
-Oh ale ale
-a riki tiki tamba
-a massa massa massa
-baloe baloe baloe
-I said baloe baloe baloe
-
-
+% Oh ale ale
+% a riki tiki tamba
+% a massa massa massa
+% baloe baloe baloe
+% I said baloe baloe baloe
 
 
-\newpage
 
-\subsubsection*{Ordförande}
+
+% \newpage
+
+\subsection*{Ordförande}
 Ordförande har till uppgift att leda och representera sektionen och en massa andra saker. 
 Detta är dock inte alls lika viktigt om man ställer det mot förväntningarna som finns på Ordförande när han/hon/hen sjunger Taggig Blomma! 
 Man får aldrig låna ut sin sångbok till Ordförande när denne skall sjunga Taggig Blomma ty då får man aldrig se den igen.
@@ -399,9 +392,10 @@ Man får aldrig låna ut sin sångbok till Ordförande när denne skall sjunga T
 
 \newpage
 
+\enlargethispage{1.0cm}
 \subsection*{Några ord om akademisk kvart}
 
-{\fontsize{8.6}{8.6}\selectfont 
+{\fontsize{9}{9}\selectfont 
 Förr i världen på den tid då bilar var exotiska och NGT, 
 så var man ganska dålig på att hålla rätt på tider. 
 Anledningen till detta var att det fanns en stor brist på klockor, fickur och mobiltelefoner. 
@@ -461,14 +455,24 @@ OBS! Använd gärna blyerts!
 
 \newpage
 
+\thispagestyle{plainnohead}
+
+\phantom{osynlig text}
 
 \begin{textblock*}{3cm}(1.0cm,1.0cm) % {width}(x, y)
    \includegraphics[width=8.5cm]{./bilder/luffarschack.png}
 \end{textblock*}
 
-\textbf{INSERT NÅGOT ANNAT SPEL VI VILL}
+
+\noBackground
 
 \newpage
+\resetBackground
+
+\thispagestyle{plainnohead}
+
+\vspace*{-13mm} % Pull the content upwards
+\enlargethispage{15mm} % Allow more vertical space at the bottom
 
 \begin{center}
     \normalfont\normalsize\bfseries Bordsgranne of Fame
@@ -500,18 +504,44 @@ Namn: \hspace{2.5cm} Sittning:
 \rule{\textwidth}{0.4mm}
 \vspace*{0.65cm}
 \rule{\textwidth}{0.4mm}
+\vspace*{0.65cm}
+\rule{\textwidth}{0.4mm}
+
+\noBackground
+
 \newpage
+\resetBackground
 
 
 
 
 \subsubsection*{Tankar på vad vi vill lägga till}
 
-\subsubsection*{Hur man tågar}
-hur man tågar
-
 \subsubsection*{Mellanskål}
-Hur man mellanskålar
+
+Nu är det dags för mellanskål
+Om det så är det sista jag gör
+Nu är det dags för mellanskål
+Hoppas inte föräldrarna stör
+Nu är det slut på versen 
+Det är dags för mellanskål
+
+\subsection*{Hur man tågar}
+
+När ett stort antal teknologer behöver förflytta sig till fots, kan detta göras genom att tåga. 
+När man möter ett övergångsställe stannar delar av tåget med jämna mellanrum för att låta bilar passera.
+När man tågar håller man sig åt sidan av vägen där man går så att cyklar och andra kan åka förbi.
+
+När man tågar ska man såklart sjunga, och här passar E-sektionens kampvisor mycket väl.
+
+En annan låt som gärna sjunges är den här under. 
+
+Oh ale ale
+a riki tiki tamba
+a massa massa massa
+baloe baloe baloe
+I said baloe baloe baloe
+
 
 \subsubsection*{Dubbelkolla att det är andra upplagan}
 Hör av oss till förra Sångbokskommittén och fråga om detta är andra upplagan. Vad fanns innan detta?

@@ -87,7 +87,7 @@
 }
 
 %%% Custom settings for table of contents %%%
-\renewcommand{\contentsname}{Innehållsförteckning} % Ändra titel på TOC
+\renewcommand{\contentsname}{\fontspec{Lucida Sans Unicode}Innehållsförteckning} % Ändra titel på TOC
 \setlength{\cftbeforesecskip}{0.2em} % Ändra spacing i TOC
 \renewcommand{\cftsecpagefont}{\normalfont s.\ } % Lägg till "s." och ändra font på sidnummer
 \renewcommand{\cftsecfont}{\normalfont} % Ändra font på kapitel texten
@@ -202,6 +202,10 @@
 \titleformat{\subsection}
   {\normalfont\fontsize{12pt}{10pt}\selectfont\fontspec{Lucida Sans Unicode}} % Adjust the size if needed
   {\thesubsection}{1em}{}
+
+  \titleformat{\subsubsection}
+  {\normalfont\fontsize{10pt}{8pt}\selectfont\fontspec{Lucida Sans Unicode}} % Adjust the size if needed
+  {\thesubsubsection}{1em}{}
 
 % Adjust vertical spacing around subsection titles
 \titlespacing{\subsection}

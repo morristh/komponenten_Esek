@@ -93,20 +93,26 @@
 \renewcommand{\cftsecfont}{\normalfont} % Ändra font på kapitel texten
 
 
+
+% \newcommand{\scHeader}[1]{%
+%   \markboth{\MakeUppercase{\textsc{#1}}}{\MakeUppercase{\textsc{#1}}}%
+% }
+
+
 %%% Index Setup %%%
 \makeindex[ % Alfabetiskt register
-  name=alfa,
-  columns=1,
-  title=Alfabetiskt Register,
-  intoc,
-  options = {-s styleAlfa.ist}
+name=alfa,
+columns=1,
+title=Alfabetiskt register,
+intoc,
+options = {-s styleAlfa.ist}
 ]
 \makeindex[ % Analfabetiskt register -- början av sången
-  name=anfa,
-  columns=1,
-  title=Analfabetiskt Register,
-  intoc,
-  options = {-s styleAlfa.ist}
+name=anfa,
+columns=1,
+title=Analfabetiskt register,
+intoc,
+options = {-s styleAlfa.ist}
 ]
 
 
@@ -133,6 +139,31 @@
   \setlength{\headsep}{15pt}     % Increase space between header and body text
   % \setlength{\footskip}{25pt}    % Optional: Adjust footer space
 }
+
+
+
+\fancypagestyle{index}{
+  \fancyhf{} % clear all header and footer fields
+  % \fancyhead[RO]{\fontsize{24pt}{24pt}\hfill \footnotesize\scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  \fancyhead[RO]{\fontsize{8pt}{12pt}\hfill \scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  \fancyhead[LE]{\fontsize{8pt}{12pt}\hfill \scshape\leftmark \hfill} % Denna raden för header på varannan sida kolla på om vi vill ha det så som D-sektionen har det.. TODO NOTE OBS
+  % \fancyfoot[LE,RO]{\thepage}
+
+  % Adjust the page number position
+  % Set page number closer to the edge by increasing the right margin
+  \fancyfoot[LE]{\hspace{-17pt}\thepage} % Flytta ut sidnummer jämna sidor
+  \fancyfoot[RO]{\thepage\hspace{-17pt}} % Flytta ut sidnummer udda sidor
+
+  % Ta bort linje under/över header och footer
+  \renewcommand{\headrulewidth}{0 pt}
+  \renewcommand{\footrulewidth}{0 pt}
+
+  % Adjust header space
+  \setlength{\headheight}{30pt}  % Increase to avoid header cut-off
+  \setlength{\headsep}{15pt}     % Increase space between header and body text
+  % \setlength{\footskip}{25pt}    % Optional: Adjust footer space
+}
+
 
 % Custom command to add content to the table of contents and set the header
 \newcommand{\addtocwithheader}[1]{%

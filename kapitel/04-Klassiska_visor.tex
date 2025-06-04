@@ -1,6 +1,6 @@
 \begin{center}
     \vspace*{1.5cm}
-    {\fontsize{20}{20}\textbf{Klassiska visor}}\\
+    {\fontsize{20}{20}\textbf{\fontspec{Lucida Sans Unicode}Klassiska visor}}\\
     \vspace{0.7cm}
     {\fontsize{12}{12}\textit{Om Bellman själv får välja}}
 \end{center}
@@ -102,7 +102,7 @@ med kungssången?}
 
 
 \newpage
-
+\enlargethispage{1cm}
 \subsection*{Studentsången} 
 \index[alfa]{Studentsången}
 \index[anfa]{Sjung om studentens lyckliga dag}
@@ -111,18 +111,19 @@ Text: Herman Sätherberg
 }
 
 \begin{parse lines}[\noindent]{#1\\}
-    Sjung om studentens lyckliga dag,
+    ||: Sjung om studentens lyckliga dag,
     låtom oss fröjdas i ungdomens vår!
     Än klappar hjärtat med friska slag,
-    och den ljusnande framtid är vår
+    och den ljusnande framtid är vår :||
+
     ||: Inga stormar än
     i våra sinnen bo,
     hoppet är vår vän,
     och vi dess löften tro,
     när vi knyta förbund i den lund,
     där de härliga lagrarna gro!
-    där de härliga lagrarna gro! :||
-    Hurra!
+    där de härliga lagrarna gro! 
+    Hurra! :||
 
 \end{parse lines}
 
@@ -133,7 +134,7 @@ Text: Herman Sätherberg
 \songinfo{Text: Richard Dybeck}
 
 \begin{parse lines}[\noindent]{#1\\}
-    Du gamla, du fria, du fjällhöga Nord
+    Du gamla, du fria, du fjällhöga nord
     du tysta, du glädjerika sköna
     Jag hälsar dig vänaste land uppå jord
     ||: Din sol, din himmel, dina ängder gröna :||
@@ -307,7 +308,11 @@ Text: Evelyn Lindström}
     Men min kompis han har piller
     Som han köpt utav en ful typ
     Och om man äter dem blir man en jättekul typ
+\end{parse lines}
 
+\newpage
+
+\begin{parse lines}[\noindent]{#1\\}
     Våran fröken är försvunnen
     Hon har dränkt sig uti brunnen
     För en morgon blev hon galen

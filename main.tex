@@ -70,14 +70,36 @@
 
 \input{kapitel/15-framtida_visor.tex}
 
-% \input{kapitel/2-nya_låtar.tex}
+%\input{kapitel/2-nya_låtar.tex}
 
 \newpage
 \resetBackground
+\fancypagestyle{plain}{\fancypagestyle{index}} % Make plain behave like index
+\pagestyle{index}
 \printindex[alfa]
 \printindex[anfa]
 \newpage
 
+
+% \newpage
+% \resetBackground
+% \pagestyle{index}
+% \scHeader{Alfabetiskt register}
+% \printindex[alfa]
+
+% \newpage
+% \pagestyle{index}
+% \scHeader{Analfabetiskt register}
+% \printindex[anfa]
+% \newpage
+
+
+
 \input{kapitel/16-bortsupen.tex}
+\newpage
+\thispagestyle{empty}
+\begin{textblock*}{3cm}(0.3cm,2.6cm) % {width}(x, y)
+    \includegraphics[width=10cm]{./bilder/ruths-bilder/hacke1.png}
+\end{textblock*}
 
 \end{document}

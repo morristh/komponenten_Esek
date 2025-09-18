@@ -17,3 +17,9 @@ I VSCode lägg till följande i ``settings.json`` för att köra LaTeX med XeLaT
 ]
 }],
 ```
+
+## Medverkande
+
+### Komponenten 2:a upplagan 
+- Morris Thånell
+- Elin Helmersson
